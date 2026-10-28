@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font1: "Roboto", sans-serif;
+  --backgroundColor1: #000000;
+  --letterSpacing: 0.7px;
+
+  --color1: #000000;
+  --color2: #e0e0e0;
+  --color3: #999999;
+
+  --copyColor1: #000000;
+  --copyColor2: #666666;
+  --copyColor3: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--backgroundColor1);
+  font-family: var(--font1);
+  color: var(--color2);
+}
+
+.container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-content: center;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.clickText {
+  color: var(--color3);
+  text-align: center;
+  padding-top: 2px;
+}
+
+.tray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.sum {
+  font-size: 100px;
+  width: 100px;
+  text-align: center;
+  padding-top: 9px;
+  opacity: 0;
+}
+
+@media (orientation: portrait) {
+  .tray {
+    flex-direction: column;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .tray {
+    transform: scale(50%);
+    transform-origin: top left;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.copy {
+  background-color: var(--copyColor1);
+  color: var(--copyColor2);
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: var(--letterSpacing);
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.copy a {
+  color: var(--copyColor2);
+  text-decoration: underline dotted;
+  text-decoration-color: var(--copyColor2);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
+
+.copy a:hover {
+  color: var(--copyColor2);
+  text-decoration-color: var(--copyColor3);
+}
+
+@media only screen and (max-width: 398px) {
+  .copy {
+    padding: 6px 0;
+    line-height: 1.6;
+  }
+
+  .copy2 {
+    display: block;
+  }
+}
